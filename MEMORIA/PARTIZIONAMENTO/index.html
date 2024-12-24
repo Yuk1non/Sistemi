@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partizionamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="intestazione">
+        <h1>Il PARTIZIONAMENTO STATICO</h1>
+    </div>
+
+    <div id="container">
+        <div id="descrizione" class="testo">
+            <h3>PARTIZIONAMENTO cos'è?</h3>
+            <p>Il partizionamento è una tecnica che suddivide la <em>RAM</em> in parti di dimensioni fisse, nelle quali vengono inseriti i processi in base alla loro grandezza. Quando un processo viene allocato in una partizione, l'intera partizione viene occupata, anche se rimangono degli spazi vuoti non utilizzati dal processo. Questo fenomeno porta a una perdita di memoria ed è noto come <em>FRAMMENTAZIONE INTERNA</em>.</p>
+            <p>Per cercare di risolvere il problema della frammentazione interna, furono create <em>PARTIZIONI</em> di diverse dimensioni (grandi, medie e piccole), con l'intento di allocare i processi in partizioni che si adattassero meglio alle loro necessità. Tuttavia, un altro problema emerse: alcuni processi che richiedevano una certa quantità di memoria non riuscivano ad essere allocati, perchè le partizioni di dimensioni appropriate erano già occupate, costringendoli ad aspettare che altre partizioni si liberassero. Questo fenomeno è conosciuto come <em>FRAMMENTAZIONE ESTERNA</em>.</p>
+        </div>
+
+    
+        <div id="tabella" class="divv"> 
+            <h3>RAM PARTIZIONATA</h3>
+            <table class="RAM">
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+                <tr class="occupata">
+                    <td>PROCESSO A</td>
+                </tr>
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+                <tr class="occupata">
+                    <td>PROCESSO B</td>
+                </tr>
+                <tr class="occupata">
+                    <td>PROCESSO C</td>
+                </tr>
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+                <tr class="occupata">
+                    <td>PROCESSO D</td>
+                </tr>
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+            <div class="overlay-content">
+                <h1>NAVIGA</h1>
+                <a href="/MEMORIA/index.html">Home</a>
+                <a href="/MEMORIA/PARTIZIONAMENTO/index.html" class="corrente">Partizionamento statico</a>
+                <a href="/MEMORIA/PARTIZIONAMENTO DINAMICO/index.html" >Partizionamento dinamico</a>
+                <a href="/MEMORIA/VIRTUALIZZAZIONE/index.html">Virtualizzazione</a>
+            </div>
+        </div>
+
+        <!-- Pulsante per aprire il Curtain Menu -->
+        <button id="menu-btn" onclick="toggleNav()">Menu</button>
+    </div>
+</body>
+</html>

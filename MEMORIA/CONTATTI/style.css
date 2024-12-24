@@ -1,0 +1,148 @@
+:root {
+    --azzurro: #aee4ed;
+    --verde: #6aabc0;
+    --verdeScuro:  	#5fb7cf;
+  }
+  
+  *{
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  body {  
+    background-color: hsl(227, 10%, 10%);
+    display: flex;            
+    justify-content: center;  
+    align-items: center;  
+    height: 500px;    
+  }
+  
+  h1 {
+    color: var(--verde);
+    font-family: 'Press Start 2P';
+    font-size:100%;
+    padding-bottom: 5px;
+  }
+  
+  .divv {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  
+  
+  /*Parte per gli input*/ 
+  .containerInput {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .campo {  
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  
+  .campo::placeholder {
+    color: transparent;
+  }
+  
+  .campo:placeholder-shown ~ .form__label {
+    cursor: text;
+    top: 20px;
+  }
+  
+  .campo:focus {
+    border-bottom: none; 
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    padding-left: 5px;
+    display: block;
+    color: var(--verde);
+    transition: 0.2s;
+    z-index: 0;
+  }
+  
+  .campo:focus ~ .form__label {
+    position: absolute;
+    display: block;
+    font-weight: bolder;
+    color: var(--verde);  
+    top: -7px; 
+  }
+
+
+
+  
+  /*Parte per bottone*/
+  button {
+    color: var(--verdeScuro);
+    width: 100%;
+    transition: 1s;
+    background: none;
+    border: 2px solid;
+    cursor: pointer;
+    margin: 1px;
+    padding: 5px;
+  }
+  
+  button:hover {
+    border-color: var(--verde);
+    color: #fff;
+    }
+  
+  #aggiunta:hover {
+    box-shadow: inset 0 0 0 2em var(--verde);
+  }
+  
+  /*Parte ordinamento*/
+  #OrdineEntrata{
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid white;
+  }
+  
+  #tabellina thead tr{
+    color: var(--verde);
+  }
+
+
+/* Stile select */
+select{
+  background-color: black;
+  color:var(--verde);
+  padding: 5px;
+  border: 2px solid;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+
+
+/*Parte per il pulsante - a */
+.torna {
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px;
+  padding: 10px 20px; 
+  background-color: var(--verdeScuro); 
+  color: white; 
+  text-decoration: none; 
+  font-weight: bold;
+  border-radius: 5px; 
+}
+
+
+
+  

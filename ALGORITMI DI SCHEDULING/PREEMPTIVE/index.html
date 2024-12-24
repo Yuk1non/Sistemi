@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-preemptive</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="intestazione">
+        <h1>Sistemi preemptive</h1>
+    </div>
+
+    <div class="container">
+        <div id="descrizione" class="testo">
+            <h3>Cosa sono?</h3>
+            <p>I sistemi preemptive sono sistemi operativi in cui il sistema ha la capacità di <em>INTERROMPERE</em> un processo in esecuzione sulla CPU, anche se questo si trova nello stato di RUN, e di assegnare la CPU a un altro processo. Questo avviene tramite un <em>ATTO DI PRELAZIONE</em>, che permette di "sospendere" un processo per favorire l'esecuzione di un altro, generalmente più urgente o prioritario.</p>
+            <p>Grazie a questo, il sistema riesce a gestire meglio i processi, facendo in modo che quelli brevi o più urgenti vengano eseguiti prima. In questo modo, i tempi di attesa medi sono ridotti, perché la CPU <em>NON RIMANE OCCUPATA</em> da un processo troppo a lungo, come invece avviene nei sistemi non preemptivi, dove un processo prende tutta la CPU finché non finisce. Con i sistemi preemptivi, si riesce a utilizzare meglio la CPU, rendendo il sistema più veloce e reattivo, specialmente quando ci sono molti processi da gestire contemporaneamente.</p>
+        </div>
+
+        <img src="Preemptive.png" alt="">
+    </div>
+
+    <a href="/ALGORITMI DI SCHEDULING/index.html" class="torna">HOME</a>
+</body>
+</html>

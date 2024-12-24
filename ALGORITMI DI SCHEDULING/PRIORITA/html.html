@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priortia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="Priorita.js"></script>
+</head>
+<body>
+    <div id="intestazione">
+        <h1>ALGORITMO DI PRIORITA</h1>
+    </div>
+
+    <div id="container">
+
+        <!--Zona descrizione funzionamento-->
+        <div id="descrizione" class="testo">
+            <h3>Priorià cos'è?</h3>
+            <p>L'algoritmo di priorità è un algoritmo di scheduling che esegue i processi in base alla loro <em>PRIORITA</em>, cioè la loro importanza. Alcuni SO come Linux e Windows assegnano la prioità più alta ai numeri minori, quindi 1 è la priorità più alta; assegnata ad esempio a processi del <em>KERNEL</em>.</p>
+
+            <br>
+
+            <h3>Starvation</h3>
+            <p>Il problema principale di questo algoritmo è la <em>STARVATION</em>, cioè la mancata esecuzione di processi con minore Priorità, che quindi rimangono insegeuiti fino alla fine dei processi più importanti.</p>
+        </div>
+
+
+        <!--Zona inserimento processi-->
+        <div id="input" class="divv">
+            <form action="" id="processo">
+                <h3>AGGIUNTA DI PROCESSI</h3>
+                <div class="containerInput field">
+                    <input type="text" class="campo" placeholder="PID" id='PID' required />
+                    <label for="PID" class="form__label">PID</label>
+                </div>
+                <div class="containerInput field">
+                    <input type="text" class="campo" placeholder="Arrivo" id='arrivo' required />
+                    <label for="Arrivo" class="form__label">Arrivo</label>
+                </div>
+                <div class="containerInput field">
+                    <input type="number" class="campo" placeholder="Durata" Durata="Durata" id='Durata' required />
+                    <label for="Durata" class="form__label">Durata</label>
+                </div>
+
+                <div class="containerInput field">
+                    <input type="number" class="campo" placeholder="Priorita" Priorita="Priorita" id='Priorita' required />
+                    <label for="Priorita" class="form__label">Priorità</label>
+                </div>
+                <br>    
+            </form>
+            <button id="aggiunta" onclick="aggiungi()">AGGIUNGI</button>
+        </div>
+
+    
+        <!--Zona tabella processi-->
+        <div id="tabella" class="divv"> 
+            <h3>TABELLA PROCESSI</h3>
+            <table id="processi">
+                <thead>
+                    <th>PID</th>
+                    <th>DURATA</th>
+                    <th>PRIORITA</th>
+                    <th>ENTRATA</th>
+                    <th>USCITA</th>
+                </thead>
+                <br>
+                <tbody>
+                    
+                </tbody>
+            </table>
+
+            <br>
+
+            <div id="OrdineEntrata">
+                <table id="tabellina">
+                    <thead>
+                        <tr></tr> 
+                    </thead>
+                </table>
+            </div>
+
+            <h5 id="tAttesa">TEMPO MEDIO DI ATTESA: </h5>
+        </div>
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+            <div class="overlay-content">
+                <h1>NAVIGA</h1>
+                <a href="/ALGORITMI DI SCHEDULING/index.html">Home</a>
+                <a href="/ALGORITMI DI SCHEDULING/FCFS/html.html">FCFS</a>
+                <a href="/ALGORITMI DI SCHEDULING/SJF/html.html">SJF</a>
+                <a href="/ALGORITMI DI SCHEDULING/PRIORITA/html.html" class="corrente">Priorità</a>
+                <a href="/ALGORITMI DI SCHEDULING/RR/index.html">RR</a>
+            </div>
+        </div>
+
+        <!-- Pulsante per aprire il Curtain Menu -->
+        <button id="menu-btn" onclick="toggleNav()">Menu</button>
+    </div>
+</body>
+</html>

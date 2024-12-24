@@ -1,0 +1,214 @@
+:root {
+    --azzurro: #aee4ed;
+    --verde: #6aabc0;
+    --verdeScuro:  	#5fb7cf;
+  }
+  
+  *{
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  body {  
+    background-color: hsl(227, 10%, 10%);
+  }
+  
+  #intestazione {
+    display: flex;
+    justify-content: center;
+  } 
+  
+  h1 {
+    color: var(--verde);
+    font-family: 'Press Start 2P';
+    font-size:150%;
+    padding-bottom: 5px;
+  }
+  
+  h3{
+    color: white;
+    text-align: center;
+    margin: 0 ;
+    border-bottom: 2px solid var(--verdeScuro);
+  }
+  
+  h5{
+    color: white;
+  }
+  
+  
+  p{
+    color: white;
+  }
+  
+  #container { 
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .divv {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .testo{
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 450px;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+  
+  em{
+    font-family: 'Press Start 2P';
+    font-size: 70%;
+    font-weight: bolder;
+    color: var(--verde);
+  }
+  
+  
+  
+  
+  /*Parte per bottone*/
+  button {
+    color: var(--verdeScuro);
+    width: 100%;
+    transition: 1s;
+    background: none;
+    border: 2px solid;
+    cursor: pointer;
+    margin: 1px;
+    padding: 5px;
+  }
+  
+  
+  /*Curtain menu*/
+  /* The Overlay (background) */
+  .overlay {
+    height: 35%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color:  hsl(227, 10%, 10%);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  
+  .overlay-content {
+    position: relative;
+    text-align: center;
+  }
+  
+  .overlay h1{
+    font-size: 15px;
+  }
+  
+  .corrente{
+    border-left: 2px solid var(--verdeScuro);
+    background-color: hsl(100, 10%, 10%);
+  }
+  
+  /* I link nel menu */
+  .overlay a {
+    display: block;
+    color: var(--azzurro);
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  .overlay button{
+    width: 95%;
+    height: 60px;
+  }
+  
+  .overlay a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Stili per il pulsante MENU */
+  #menu-btn {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px;
+    width: 80px;
+    font-size: 20px;
+  }
+  
+  
+  
+  
+  /* Responsive */
+  @media (max-width: 1025px) {
+    #container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    h1{
+      font-size: 150%;
+    }
+    .divv {
+      width: 400px;
+      justify-items: center;
+    }
+  }
+  
+  
+  @media (max-width: 480px){
+    div{
+      width: 100%;
+    }
+  
+    #OrdineEntrata {
+      font-size: 0.9em;
+    }
+  }
+  
+  
+  
+  /* RAM */
+  .RAM {
+    width: 300px;
+    border: 2px solid #333;
+    border-collapse: collapse;
+  }
+  
+  .RAM td {
+    color: white;
+    padding: 8px;
+    text-align: center; 
+    border: 1px solid white; 
+  }
+  
+  .RAM td:hover {
+    background-color: hsl(100, 10%, 10%); 
+    color: white;
+  }
+  
+  
+  #p20 {
+    height: 20px;
+    background-color: var(--verde); 
+  }
+  
+  #p110 {
+    height: 110px; 
+    background-color: var(--verde);
+  }
+  
+  #p90 {
+    height: 90px; 
+    background-color: var(--verde);
+  }
+  
+  #p100 {
+    height: 100px; 
+    background-color: var(--verde);
+  }
+  

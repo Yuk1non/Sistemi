@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtualizzazione</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="intestazione">
+        <h1>LA VIRTUALIZZAZIONE</h1>
+    </div>
+
+    <div id="container">
+        <div id="descrizione" class="testo">
+            <h3>VIRTUALIZZAZIONE cos'è?</h3>
+            <p>Nella virtualizzazione, i processi non vengono più trattati come blocchi unici di memoria, ma come sequenze di <em>ISTRUZIONI SEPARATE</em>. Queste istruzioni vengono gestite dallo <em>SCHEDULER</em> del sistema operativo, che carica in RAM solo le istruzioni effettivamente necessarie al programma in quel momento. Il resto delle istruzioni rimane conservato nella memoria di massa. </p>
+            <p>Le istruzioni di un processo possono essere distribuite in zone separate della RAM, chiamate <em>PAGINE</em>. Per tenere traccia della posizione di ogni istruzione, viene utilizzato l'<em>MMU</em>, che gestisce una tabella di pagine contenente gli indirizzi di memoria di ciascuna istruzione. Questo processo permette di accedere rapidamente alla memoria, anche se le istruzioni sono sparse in diverse posizioni fisiche della RAM. Inoltre, le istruzioni possono essere <em>CONDIVISE</em> tra diversi programmi, se condividono lo stesso corpo (ad esempio, una libreria condivisa). In questo caso, le variabili vengono eseguite in contesti diversi, ma le stesse istruzioni vengono utilizzate da più processi.</p>
+            <p>Esistono situazioni in cui una istruzione necessita di un'altra per essere eseguita, e quindi deve essere caricata in memoria. In questi casi, se c'è spazio disponibile, l'istruzione viene caricata correttamente nella RAM, e il programma può proseguire l'esecuzione normalmente. Al contrario, si può verificare un <em>PAGE FAULT</em>, che si verifica quando non c'è abbastanza spazio libero nella RAM per caricare una nuova istruzione. In questo caso, il processo non può proseguire immediatamente, e si entra in uno stato di <em>BLOCCO</em>. Il programma deve quindi attendere fino a quando non si libera dello spazio in RAM per caricare l'istruzione richiesta.</p>
+        </div>
+
+    
+        <div id="tabella" class="divv"> 
+            <h3>TABELLA DELL'MMU</h3>
+            <table class="RAM">
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+                <tr class="occupata" id="p20">
+                    <td>Pa - istruzione 1</td>
+                </tr>
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+                <tr class="occupata" id="p90">
+                    <td>Pa - istruzione 2</td>
+                </tr>
+                <tr class="occupata" id="p110">
+                    <td>Pb - istruzione 1</td>
+                </tr>
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+                <tr class="occupata" id="p100">
+                    <td>Pa - istruzione 3</td>
+                </tr>
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+                <tr class="occupata" id="p90">
+                    <td>Pb - istruzione 2</td>
+                </tr>
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+                <tr class="occupata" id="p110">
+                    <td>Pa - istruzione 4</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+            <div class="overlay-content">
+                <h1>NAVIGA</h1>
+                <a href="/MEMORIA/index.html">Home</a>
+                <a href="/MEMORIA/PARTIZIONAMENTO/index.html" >Partizionamento statico</a>
+                <a href="/MEMORIA/PARTIZIONAMENTO DINAMICO/index.html">Partizionamento dinamico</a>
+                <a href="/MEMORIA/VIRTUALIZZAZIONE/index.html" class="corrente">Virtualizzazione</a>
+            </div>
+        </div>
+
+        <!-- Pulsante per aprire il Curtain Menu -->
+        <button id="menu-btn" onclick="toggleNav()">Menu</button>
+    </div>
+</body>
+</html>

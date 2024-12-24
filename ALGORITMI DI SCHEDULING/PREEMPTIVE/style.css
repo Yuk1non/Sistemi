@@ -1,0 +1,108 @@
+:root {
+  --azzurro: #aee4ed;
+  --verde: #6aabc0;
+  --verdeScuro:  	#5fb7cf;
+}
+
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {  
+  background-color: hsl(227, 10%, 10%);
+}
+
+#intestazione {
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1 {
+  color: var(--verde);
+  font-family: 'Press Start 2P';
+  font-size:150%;
+  padding-bottom: 5px;
+}
+
+h3{
+  color: white;
+  margin: 0 ;
+  border-bottom: 2px solid var(--verdeScuro);
+}
+
+p{
+  color: white;
+}
+
+a{
+  color: var(--verde);
+  text-decoration: none;
+}
+
+#container { 
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 20px;
+}
+
+.container img {
+  width: 300px;
+  object-fit: cover; 
+  border-radius: 10px;
+  border: 2px solid black;
+  transition: transform 0.3s;
+}
+
+.container img:hover{
+  transform: scale(1.1);
+  border-color: var(--verde);
+}
+
+.divv {
+  background-color: black;
+  text-align: justify;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+}
+
+.testo{
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: justify;
+  width: 400px;
+}
+
+em{
+  font-family: 'Press Start 2P';
+  font-size: 70%;
+  font-weight: bolder;
+  color: var(--verde);
+}
+
+/*Parte per il pulsante - a */
+.torna {
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px;
+  padding: 10px 20px; 
+  background-color: var(--verdeScuro); 
+  color: white; 
+  text-decoration: none; 
+  font-weight: bold;
+  border-radius: 5px; 
+}
+
+
+

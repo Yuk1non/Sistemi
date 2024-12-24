@@ -1,0 +1,285 @@
+:root {
+  --azzurro: #aee4ed;
+  --verde: #6aabc0;
+  --verdeScuro:  	#5fb7cf;
+}
+
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {  
+  background-color: hsl(227, 10%, 10%);
+}
+
+#intestazione {
+  display: flex;
+  justify-content: center;
+} 
+
+h1 {
+  color: var(--verde);
+  font-family: 'Press Start 2P';
+  font-size:150%;
+  padding-bottom: 5px;
+}
+
+h3{
+  color: white;
+  margin: 0 ;
+  border-bottom: 2px solid var(--verdeScuro);
+}
+
+h5{
+  color: white;
+}
+
+
+p{
+  color: white;
+}
+
+#container { 
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.divv {
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.testo{
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 450px;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+em{
+  font-family: 'Press Start 2P';
+  font-size: 70%;
+  font-weight: bolder;
+  color: var(--verde);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Parte per gli input*/ 
+.containerInput {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.campo {  
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  width: 220px;
+}
+
+.campo::placeholder {
+  color: transparent;
+}
+
+.campo:placeholder-shown ~ .form__label {
+  cursor: text;
+  top: 20px;
+}
+
+.campo:focus {
+  border-bottom: none; 
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  padding-left: 5px;
+  display: block;
+  color: var(--verde);
+  transition: 0.2s;
+  z-index: 0;
+}
+
+.campo:focus ~ .form__label {
+  position: absolute;
+  display: block;
+  font-weight: bolder;
+  color: var(--verde);  
+  top: -7px; 
+}
+
+
+
+
+
+
+/*Parte perla tabella*/
+#processi{
+  color: white;
+  border: 1px solid;
+  border-collapse: collapse;
+  border-color: var(--verde);
+}
+
+#processi th, #processi td {
+  padding: 8px;
+  text-align: center; 
+  border: 1px solid white; 
+}
+
+#processi thead{
+  background-color: #282828;
+}
+
+#processi tbody tr:hover {
+  background-color: var(--verde); 
+}
+
+
+
+
+
+
+/*Parte per bottone*/
+button {
+  color: var(--verdeScuro);
+  width: 100%;
+  transition: 1s;
+  background: none;
+  border: 2px solid;
+  cursor: pointer;
+  margin: 1px;
+  padding: 5px;
+}
+
+button:hover {
+  border-color: var(--verde);
+  color: #fff;
+  }
+
+button:hover {
+  box-shadow: inset 0 0 0 2em var(--verde);
+}
+
+
+
+
+
+/*Parte ordinamento*/
+#OrdineEntrata{
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+#tabellina thead tr{
+  color: var(--verde);
+}
+
+
+
+
+
+
+/*Curtain menu*/
+/* The Overlay (background) */
+.overlay {
+  height: 35%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color:  hsl(227, 10%, 10%);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+
+/* Posizionamento dei link all'interno del Curtain Menu */
+.overlay-content {
+  position: relative;
+  text-align: center;
+}
+
+.overlay h1{
+  font-size: 15px;
+}
+
+.corrente{
+  border-left: 2px solid var(--verdeScuro);
+  background-color: hsl(100, 10%, 10%);
+}
+
+/* I link nel menu */
+.overlay a {
+  display: block;
+  color: var(--azzurro);
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+}
+
+.overlay button{
+  width: 95%;
+  height: 60px;
+}
+
+.overlay a:hover {
+  color: #f1f1f1;
+}
+
+/* Stili per il pulsante MENU */
+#menu-btn {
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px;
+  width: 80px;
+  font-size: 20px;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 1025px) {
+  #container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1{
+    font-size: 150%;
+  }
+  .divv {
+    width: 90%;
+    justify-items: center;
+  }
+}
+
+
+@media (max-width: 480px){
+  div{
+    width: 100%;
+  }
+
+  #OrdineEntrata {
+    font-size: 0.9em;
+  }
+}

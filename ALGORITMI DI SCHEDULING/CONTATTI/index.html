@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form di Registrazione</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="input" class="divv">
+        <form action="" id="processo">
+            <h1>ISCRIVITI PER LE LEZIONI</h1>
+            <div class="containerInput field">
+                <input type="text" class="campo" placeholder="Nome" id='Nome' required />
+                <label for="Nome" class="form__label">Nome</label>
+            </div>
+            <div class="containerInput field">
+                <input type="text" class="campo" placeholder="Cognome" id='Cognome' required />
+                <label for="Cognome" class="form__label">Cognome</label>
+            </div>
+            <select name="lezioni" id="lezioni">
+                <option value="" selected>Cosa vuoi imparare</option>
+                <option value="FCFS">FCFS</option>
+                <option value="SJF">SJF</option>
+                <option value="Priorita">Priorita</option>
+                <option value="RR">Round Robin</option>
+            </select>
+               
+        </form>
+        <button id="aggiunta" onclick="aggiungi()">AGGIUNGI</button>
+    </div>
+
+
+
+    <a href="/ALGORITMI DI SCHEDULING/index.html" class="torna">HOME</a>
+</body>
+</html>

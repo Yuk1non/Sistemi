@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partizionamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="intestazione">
+        <h1>Il PARTIZIONAMENTO DINAMICO</h1>
+    </div>
+
+    <div id="container">
+        <div id="descrizione" class="testo">
+            <h3>PARTIZIONAMENTO cos'è?</h3>
+            <p>Nel partizionamento dinamico, le <em>PARTIZIONI</em> vengono create al momento dell'arrivo di un processo, in modo da ottenere partizioni di <em>DIMENSIONI ESATTE</em> e senza sprechi di memoria.</p>
+            <p>Esistono diversi <em>ALGORITMI DI ALLOCAZIONE</em> che consentono di inserire i processi nelle partizioni. Visto che i processi non possono essere suddivisi in più istruzioni, è necessario disporre di blocchi di memoria contigui, cioè spazi di memoria abbastanza grandi e vicini tra loro. Questo può causare problemi di frammentazione, in cui le piccole aree lasciate dai processi di dimensioni ridotte non vengono mai utilizzate, poiché sono troppo piccole, e rimangono inutilizzate. Questo fenomeno è noto come <em>FRAMMENTAZIONE INTERNA</em>.</p>
+            <p>Per <em>RISOLVERE</em> il problema della frammentazione, è possibile spostare le piccole partizioni rilasciate nella RAM attraverso la <em>DEFRAMMENTAZIONE</em>, avvicinando gli spazi liberi e creando partizioni più grandi. Tuttavia, questo processo dura molto tempo.</p>
+        </div>
+
+    
+        <div id="tabella" class="divv"> 
+            <h3>RAM PARTIZIONATA</h3>
+            <table class="RAM">
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+                <tr class="occupata" id="p20">
+                    <td>PROCESSO A</td>
+                </tr>
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+                <tr class="occupata" id="p90">
+                    <td>PROCESSO B</td>
+                </tr>
+                <tr class="occupata" id="p110">
+                    <td>PROCESSO C</td>
+                </tr>
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+                <tr class="occupata" id="p100">
+                    <td>PROCESSO D</td>
+                </tr>
+                <tr class="libera">
+                    <td>Libera</td>
+                </tr>
+            </table>
+            <br>
+            <button onclick="deframmenta()">DEFRAMMENTA</button>
+        </div>
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+            <div class="overlay-content">
+                <h1>NAVIGA</h1>
+                <a href="/MEMORIA/index.html">Home</a>
+                <a href="/MEMORIA/PARTIZIONAMENTO/index.html" >Partizionamento statico</a>
+                <a href="/MEMORIA/PARTIZIONAMENTO DINAMICO/index.html" class="corrente">Partizionamento dinamico</a>
+                <a href="/MEMORIA/VIRTUALIZZAZIONE/index.html">Virtualizzazione</a>
+            </div>
+        </div>
+
+        <!-- Pulsante per aprire il Curtain Menu -->
+        <button id="menu-btn" onclick="toggleNav()">Menu</button>
+    </div>
+</body>
+</html>
